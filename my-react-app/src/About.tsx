@@ -1,13 +1,16 @@
 import { Box, Button, Typography } from '@mui/material';
 import { motion } from 'framer-motion';
-import React from 'react';
 import portfolio from "./images/Akansha.webp";
 
+interface SplitTextProps {
+  text: string;
+}
+
 // Function to animate split text (letter by letter)
-const SplitText = ({ text }) => {
+const SplitText: React.FC<SplitTextProps> = ({ text }) => {
   return (
     <motion.span style={{ display: "inline-block" }}>
-      {text.split("").map((char, index) => (
+      {text.split("").map((char:string, index:number) => (
         <motion.span
           key={index}
           initial={{ opacity: 0, y: 10 }}

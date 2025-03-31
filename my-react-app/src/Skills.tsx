@@ -1,6 +1,5 @@
 import { Box, Chip, Divider, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
-import React from 'react';
 import { motion } from "framer-motion";
 
 // Import skill images

@@ -1,6 +1,5 @@
 import { Box, Card, CardContent, CardHeader, CardMedia, Typography } from '@mui/material';
 import { motion } from "framer-motion";
-import React from 'react';
 
 const Experience = () => {
   return (

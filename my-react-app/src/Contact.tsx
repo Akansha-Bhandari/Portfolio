@@ -1,5 +1,4 @@
 import { Box, Button, Divider, IconButton, TextField, Typography, useTheme } from '@mui/material';
-import React from 'react';
 import MailIcon from '@mui/icons-material/Mail';
 import PhoneIcon from '@mui/icons-material/Phone';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';

@@ -1,64 +1,3 @@
-// import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineOppositeContent, TimelineSeparator } from '@mui/lab'
-// import { Box, Typography } from '@mui/material'
-// import React from 'react'
-// import SchoolIcon from '@mui/icons-material/School';
-// const Qualification = () => {
-//   return (
-//     <Box sx={{padding:'50px 10px', backgroundColor:''}}>
-//     <Timeline position="alternate">
-//       <TimelineItem>
-//         <TimelineOppositeContent
-//           sx={{ m: 'auto 0' }}
-//           align="right"
-//           variant="body2"
-//           color="text.secondary"
-//         >
-//           Post Graduation
-//         </TimelineOppositeContent>
-//         <TimelineSeparator>
-//           <TimelineConnector />
-//           <TimelineDot color="primary">
-//             <SchoolIcon />
-//           </TimelineDot>
-//           <TimelineConnector />
-//         </TimelineSeparator>
-//         <TimelineContent sx={{ py: '12px', px: 2 }}>
-//           <Typography variant="h6" component="span">
-//             Master of Computer Application
-//           </Typography>
-//           <Typography>Indira Gandhi Delhi Technical University for Women</Typography>
-//           <Typography>[2019-2022]</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//       <TimelineItem>
-//         <TimelineOppositeContent
-//           sx={{ m: 'auto 0' }}
-//           variant="body2"
-//           color="text.secondary"
-//         >
-//           Graduation
-//         </TimelineOppositeContent>
-//         <TimelineSeparator>
-//           <TimelineConnector />
-//           <TimelineDot color="primary">
-//             <SchoolIcon />
-//           </TimelineDot>
-//           <TimelineConnector />
-//         </TimelineSeparator>
-//         <TimelineContent sx={{ py: '12px', px: 2 }}>
-//           <Typography variant="h6" component="span">
-//             Bachelor of Computer Application
-//           </Typography>
-//           <Typography>Jamia Hamdard</Typography>
-//           <Typography>[2016-2019]</Typography>
-//         </TimelineContent>
-//       </TimelineItem>
-//     </Timeline>
-//     </Box>
-//   )
-// }
-
-// export default Qualification
 import { Timeline, TimelineConnector, TimelineContent, TimelineDot, TimelineItem, TimelineSeparator } from '@mui/lab';
 import { Box, Typography } from '@mui/material';
 import SchoolIcon from '@mui/icons-material/School';
@@ -83,7 +22,7 @@ const Qualification = () => {
           year: "2016-2019",
           align: "left"
         }].map((edu, index) => (
-          <TimelineItem key={index} position={edu.align}>
+          <TimelineItem key={index} position={edu.align as "left" | "right"}>
             <TimelineSeparator>
               <TimelineDot sx={{ bgcolor: '#1E1E2E' }}>
                 <SchoolIcon fontSize="small" sx={{ color: 'white' }} />

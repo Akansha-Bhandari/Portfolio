@@ -1,40 +1,4 @@
-// import { AppBar, Box, Button, IconButton, Toolbar, Typography } from '@mui/material'
-// import React from 'react'
-// import MenuIcon from "@mui/icons-material/Menu";
-
-
-// const Navbar = () => {
-//   return (
-//     <AppBar position="static" sx={{background: "transparent", boxShadow: "none", color:'black', fontFamily:'sans-serif'}}>
-//       <Toolbar>
-//         {/* Menu Icon (For Mobile) */}
-//         <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-//           <MenuIcon />
-//         </IconButton>
-
-//         {/* Title */}
-//         <Typography variant="h6" sx={{ flexGrow: 1 }}>
-//           Akansha Bhandari ✨
-//         </Typography>
-
-//         {/* Navigation Buttons */}
-//         <Box sx={{ display:'flex', flexDirection:'row' }}>
-//           <Button color="inherit">Home</Button>
-//           <Button color="inherit">About</Button>
-//           <Button color="inherit">Skills</Button>
-//           <Button color="inherit">Qualification</Button>
-//           <Button color="inherit">Experience</Button>
-//           <Button color="inherit">Projects</Button>
-//           <Button color="inherit">Contact</Button>
-//         </Box>
-//       </Toolbar>
-//     </AppBar>
-//   )
-// }
-
-// export default Navbar
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AppBar, Box, Button, IconButton, Toolbar, Typography, Drawer, List, ListItem, ListItemButton, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useTheme } from '@mui/material/styles';
@@ -45,7 +9,7 @@ const Navbar = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleScroll = (id) => {
+  const handleScroll = (id:string) => {
     const section = document.getElementById(id);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth', block: 'center' });
